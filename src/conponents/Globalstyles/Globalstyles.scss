@@ -1,0 +1,99 @@
+@import 'normalize.css';
+//@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+//nhung fonts chu
+@font-face {
+    font-family: ProximaNova; // cho nay dat ten tuy y
+    src: url('/access/fonts/Proxima-Nova-Regular.woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url('/access/fonts/Proxima-Nova-Semibold.woff2');
+    font-weight: 600;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url('/access/fonts/Proxima-Nova-Bold.woff');
+    font-weight: 700;
+}
+@font-face {
+    font-family: SofiaPro;
+    src: url('/access/fonts/sofiapro-bold.woff');
+    font-weight: 700;
+}
+:root {
+    --primary: #fe2c55;
+    --black: #000;
+    --while: #fff;
+    --text-color: #161823;
+    // default layout
+    --default-layout-head-height: 60px;
+    --default-layout-width: 1150px;
+    --default-layout-horizontal-spacer: 24px;
+    --font-famil: 'ProximaNova', sans-serif;
+}
+html {
+    font-size: 62.5%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--font-famil); //'Roboto'
+    font-size: 1.6em;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed; // để tôi ưu tốc độ hiển thị phông chữ ổn định
+    color: var(--black);
+    overflow-y: overlay; // làm bỏ ik cái phàn dày lên ỏ bên trai thanh quận
+}
+
+// srolbar css
+html *::-webkit-scrollbar {
+    //dặt kích thước cho sroll
+    border-radius: 0;
+    width: 8px;
+}
+html *::-webkit-scrollbar-track {
+    //dặt cho thanh scroll dày
+    border-radius: 14px;
+    background-color: rgba(0, 0, 0, 0);
+}
+html *::-webkit-scrollbar-thumb {
+    //dặt cho thanh scroll ngắn lăn tren thanh dày
+    border-radius: 24px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+button,
+input,
+[tabindex] {
+    border: none;
+    outline: none;
+}
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+// chinh css cho tool tip cua tippy
+body {
+    .tippy-box {
+        border-radius: 8px;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        background-color: rgba(84, 84, 84, 0.9);
+    }
+
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.9);
+    }
+    .tippy-content {
+        padding: 8px 9px;
+    }
+}
