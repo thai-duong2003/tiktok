@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import classNames from 'classnames/bind';
 import styles from './Menu.module.scss';
-import Tippy from '@tippyjs/react/headless';
+import Tippy from '@tippyjs/react/headless'; //nho phai them headless
 import { Wrapper as PopperWrapper } from '~/conponents/popper'; //la cai shatdow cho Tippy
 import Menuitem from './Menuitem';
 import Header from './HeaderMenu';
@@ -41,7 +41,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultfn 
             placement="bottom-end" //vi tri hien thi
             offset={[15, 8]} // vi tri di chuyen [chieu ngang, cao]
             delay={[0, 700]} // delay : [thoi gian hien , thoi gian an ]
-            hideOnClick={hideOnClick} // đẻ khi bấm vào tì nó sẽ ko bị ẩn ik
+            hideOnClick={hideOnClick} // đẻ khi bấm vào thì nó sẽ ko bị ẩn ik
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
                     <PopperWrapper className={cx('menu-popper')}>

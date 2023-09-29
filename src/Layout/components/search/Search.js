@@ -19,12 +19,11 @@ function Search() {
 
     const debounce = useDebounce(searchvalue, 500); //khi người dùng ngừng gõ 500ml giây
 
-    const inputref = useRef();
+    const inputref = useRef(); //useRef: no don gian la chi luu cai gia tri cua the ma no dc gan vao
     useEffect(() => {
         //xử lý trường hợp khi input ko có value
         if (!debounce.trim()) {
             setsearchResult([]); //khi ko có value thi để nó là mảng rỗng
-
             return; //neu ko co value thi no return troongs
         }
 

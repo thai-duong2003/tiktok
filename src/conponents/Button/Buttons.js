@@ -24,13 +24,14 @@ function Buttons({
     // href : de link ra ngoai
     let Comp = 'button';
     const props = {
-        onClick,
-        ...passprops, // danh cho nhung  cai prop ko luong trc dc
+        // de chuas nhung cais prop dc them qua cac xu li
+        onClick, //chuyen cick vaof day la vi onclick nos vhir nhan o nut
+        ...passprops, // dung cai nay de khi muon chuyen chang ma mo bang tab moi khi dung target="_blank" neu ko co cai nay nay thi no se chuyen huofg o trang day luon
     };
     if (disabled) {
         // neu trong the co disabled thi se xoa onclick ik
         Object.keys(props).forEach((key) => {
-            //loc qua va kiem tra xem trong propd co cai nao bat dau tu on ko neu co thi xoa no ik
+            //loc qua va kiem tra xem trong props co cai nao bat dau tu on ko neu co thi xoa no ik
             if (key.startsWith('on') && typeof props[key] === 'function') {
                 delete props[key];
             }
@@ -45,7 +46,8 @@ function Buttons({
         Comp = 'a';
     }
     const classes = cx('wrapper', {
-        [className]: className, //khi co gt thi no xe gan nguoc lai
+        //them class vao the
+        [className]: className, //viet class moi khi co gt thi no xe gan nguoc lai
         primary,
         outline,
         rounded,

@@ -28,7 +28,7 @@ import routesconfig from '~/config/routes';
 
 const cx = classNames.bind(styles); // giup co the viet className duoi dang dau gach ngang ' - '
 
-const currentUser = false;
+const currentUser = true;
 
 const MENU_ITEMS = [
     {
@@ -116,6 +116,7 @@ function Header() {
                                 </button>
                             </Tippy>
                             <Tippy content="Messages" placement="bottom" delay={[0, 200]}>
+                                {/*delay={[time bat, time tat] */}
                                 <button className={cx('action-btn')}>
                                     <MessagesIcon />
                                 </button>
